@@ -1,0 +1,39 @@
+---
+x-admin-env: &aenv
+  MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+  MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+
+x-bucket-env: &benv
+  BUCKET_NAME: ${BUCKET_NAME}
+
+x-user-envv: &uenv
+  CLIENT_USERNAME: ${CLIENT_USERNAME}
+  CLIENT_PASSWORD: ${CLIENT_PASSWORD}
+
+services:
+  minio:
+    image: quay.io/minio/minio
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+        <<: [*aenv, *benv]
+    tmpfs:
+      - /data:rw,size=15M
+
+  init-minio:
+    build: ./init_container
+    environment:
+        <<: [*aenv, *uenv, *benv]
+    depends_on:
+      minio:
+        condition: service_started
+  
+  app:
+    build: ./app
+    environment:
+      <<: [*uenv, *benv]
+    depends_on:
+      init-minio:
+        condition: service_completed_successfully
