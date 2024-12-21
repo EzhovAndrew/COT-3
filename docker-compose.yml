@@ -2,11 +2,12 @@
 x-admin-env: &aenv
   MINIO_ROOT_USER: ${MINIO_ROOT_USER}
   MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+  MINIO_SCANNER_SPEED: ${MINIO_SCANNER_SPEED}
 
 x-bucket-env: &benv
   BUCKET_NAME: ${BUCKET_NAME}
 
-x-user-envv: &uenv
+x-user-env: &uenv
   CLIENT_USERNAME: ${CLIENT_USERNAME}
   CLIENT_PASSWORD: ${CLIENT_PASSWORD}
 
@@ -20,7 +21,7 @@ services:
     environment:
         <<: [*aenv, *benv]
     tmpfs:
-      - /data:rw,size=15M
+      - /data:rw,size=100M
 
   init-minio:
     build: ./init_container

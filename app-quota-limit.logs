@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/boto3/s3/transfer.py", line 371, in upload_file
+    future.result()
+  File "/usr/local/lib/python3.11/site-packages/s3transfer/futures.py", line 103, in result
+    return self._coordinator.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/s3transfer/futures.py", line 264, in result
+    raise self._exception
+  File "/usr/local/lib/python3.11/site-packages/s3transfer/tasks.py", line 135, in __call__
+    return self._execute_main(kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/s3transfer/tasks.py", line 158, in _execute_main
+    return_value = self._main(**kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/s3transfer/upload.py", line 762, in _main
+    client.put_object(Bucket=bucket, Key=key, Body=body, **extra_args)
+  File "/usr/local/lib/python3.11/site-packages/botocore/client.py", line 565, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/botocore/client.py", line 1017, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (XMinioAdminBucketQuotaExceeded) when calling the PutObject operation: Bucket quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/main.py", line 18, in <module>
+    main()
+  File "/app/main.py", line 15, in main
+    s3.upload_file('test.jpeg', os.getenv("BUCKET_NAME"), f'test-{i}.jpeg')
+  File "/usr/local/lib/python3.11/site-packages/boto3/s3/inject.py", line 145, in upload_file
+    return transfer.upload_file(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/boto3/s3/transfer.py", line 377, in upload_file
+    raise S3UploadFailedError(
+boto3.exceptions.S3UploadFailedError: Failed to upload test.jpeg to testbucket/test-2423.jpeg: An error occurred (XMinioAdminBucketQuotaExceeded) when calling the PutObject operation: Bucket quota exceeded

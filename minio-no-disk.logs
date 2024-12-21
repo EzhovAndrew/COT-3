@@ -1,0 +1,568 @@
+INFO: Formatting 1st pool, 1 set(s), 1 drives per set.
+INFO: WARNING: Host local has more than 0 drives of set. A host failure will result in data becoming unavailable.
+MinIO Object Storage Server
+Copyright: 2015-2024 MinIO, Inc.
+License: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html
+Version: RELEASE.2024-12-18T13-15-44Z (go1.23.4 linux/amd64)
+
+API: http://172.18.0.2:9000  http://127.0.0.1:9000 
+WebUI: http://172.18.0.2:9001 http://127.0.0.1:9001  
+
+Docs: https://docs.min.io
+WARN: Detected default credentials 'minioadmin:minioadmin', we recommend that you change these values with 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD' environment variables
+
+API: PutObject(bucket=testbucket, object=test-1276.jpeg)
+Time: 17:07:47 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+RequestID: 181340328D13345E
+RemoteHost: 172.18.0.3
+Host: minio:9000
+UserAgent: Boto3/1.34.106 md/Botocore#1.34.162 ua/2.0 os/linux#6.8.0-49-generic md/arch#x86_64 lang/python#3.11.11 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.162
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: d0bf1851-1ac3-45e6-9a24-eda795e8e86c, dstVolume: testbucket:, dstPath: test-1276.jpeg - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 9365833e-5db8-4eb1-ae8a-1ac749b26273, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: e14fa8e9-59ac-4a7a-be10-80b73009670d, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       3: internal/logger/logger.go:268:logger.LogIf()
+       2: cmd/logging.go:136:cmd.scannerLogIf()
+       1: cmd/erasure.go:566:cmd.erasureObjects.nsScanner.func2()
+
+API: SYSTEM.storage
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: acbb19e1-07e0-46f0-9ac8-03cdeb8655e5, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: d500f000-6d1a-44b3-a13d-95c2bf5aa19c, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       4: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       3: internal/logger/logonce.go:149:logger.LogOnceIf()
+       2: cmd/logging.go:140:cmd.scannerLogOnceIf()
+       1: cmd/erasure.go:465:cmd.erasureObjects.nsScanner.func1()
+
+API: SYSTEM.storage
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: c6f68d15-d711-4070-b847-6f76fdaa789c, dstVolume: .minio.sys:, dstPath: buckets/.bloomcycle.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 51292f26-b4f2-40d3-aece-5a1ef5386ff6, dstVolume: .minio.sys:, dstPath: buckets/.usage.json - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold., Object buckets/.bloomcycle.bin (*fmt.wrapError)
+       4: internal/logger/logger.go:268:logger.LogIf()
+       3: cmd/logging.go:136:cmd.scannerLogIf()
+       2: cmd/data-scanner.go:231:cmd.runDataScanner()
+       1: cmd/data-scanner.go:82:cmd.initDataScanner.func1()
+
+API: SYSTEM.scanner
+Time: 17:08:40 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       4: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       3: internal/logger/logonce.go:149:logger.LogOnceIf()
+       2: cmd/logging.go:140:cmd.scannerLogOnceIf()
+       1: cmd/data-usage.go:59:cmd.storeDataUsageInBackend()
+
+API: SYSTEM.storage
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 07fbf745-1354-4d31-a29e-476231682ce9, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 290f99ce-cebc-41e9-9394-d7fd36cb421a, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       3: internal/logger/logger.go:268:logger.LogIf()
+       2: cmd/logging.go:136:cmd.scannerLogIf()
+       1: cmd/erasure.go:566:cmd.erasureObjects.nsScanner.func2()
+
+API: SYSTEM.storage
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 95e6ddf9-fb14-4412-97bf-5f4e4e3a33b9, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 5de967bc-1c5e-4156-8b64-715e2c97bf5f, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: f6f9faab-88be-4850-8c8c-3128dc8782f1, dstVolume: .minio.sys:, dstPath: buckets/.bloomcycle.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 2a175309-0b05-4697-883b-242a15c101a6, dstVolume: .minio.sys:, dstPath: buckets/.usage.json - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:09:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold., Object buckets/.bloomcycle.bin (*fmt.wrapError)
+       4: internal/logger/logger.go:268:logger.LogIf()
+       3: cmd/logging.go:136:cmd.scannerLogIf()
+       2: cmd/data-scanner.go:231:cmd.runDataScanner()
+       1: cmd/data-scanner.go:82:cmd.initDataScanner.func1()
+
+API: SYSTEM.storage
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 6090916e-7c1d-46dc-abdb-2b2c0683877e, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 82020f7a-6bad-4a3f-a1ea-5c17381545c1, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       3: internal/logger/logger.go:268:logger.LogIf()
+       2: cmd/logging.go:136:cmd.scannerLogIf()
+       1: cmd/erasure.go:566:cmd.erasureObjects.nsScanner.func2()
+
+API: SYSTEM.storage
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 32e07c33-71bc-4cad-800e-6058eaa038ea, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 36b588bd-488e-4a25-b363-869b0d162c28, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 78cd3a2a-fe2c-4bbf-b879-62ea58e24e57, dstVolume: .minio.sys:, dstPath: buckets/.bloomcycle.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold., Object buckets/.bloomcycle.bin (*fmt.wrapError)
+       4: internal/logger/logger.go:268:logger.LogIf()
+       3: cmd/logging.go:136:cmd.scannerLogIf()
+       2: cmd/data-scanner.go:231:cmd.runDataScanner()
+       1: cmd/data-scanner.go:82:cmd.initDataScanner.func1()
+
+API: SYSTEM.storage
+Time: 17:10:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: d274e5b3-2041-4783-88d4-f92c75bade9e, dstVolume: .minio.sys:, dstPath: buckets/.usage.json - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: b0fe84f9-9400-4020-9187-81f10be7a1b8, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 6e655e8b-c724-4acb-9321-4c7c2ac10211, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       3: internal/logger/logger.go:268:logger.LogIf()
+       2: cmd/logging.go:136:cmd.scannerLogIf()
+       1: cmd/erasure.go:566:cmd.erasureObjects.nsScanner.func2()
+
+API: SYSTEM.storage
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 42c9dd32-bfc2-479d-b983-408566dd0d83, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: c74b1edd-ea21-4372-9e71-2fdc1f615268, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 2fe10a29-d923-4905-8adf-20044dde4165, dstVolume: .minio.sys:, dstPath: buckets/.bloomcycle.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold., Object buckets/.bloomcycle.bin (*fmt.wrapError)
+       4: internal/logger/logger.go:268:logger.LogIf()
+       3: cmd/logging.go:136:cmd.scannerLogIf()
+       2: cmd/data-scanner.go:231:cmd.runDataScanner()
+       1: cmd/data-scanner.go:82:cmd.initDataScanner.func1()
+
+API: SYSTEM.storage
+Time: 17:11:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 6b5395d9-1cac-4d4f-87de-eb494f016d9e, dstVolume: .minio.sys:, dstPath: buckets/.usage.json - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: f17efd4e-9d53-4c00-a174-7ecd9c094fa7, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 22a019c4-011e-4190-b492-15dd1dfd8903, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       3: internal/logger/logger.go:268:logger.LogIf()
+       2: cmd/logging.go:136:cmd.scannerLogIf()
+       1: cmd/erasure.go:566:cmd.erasureObjects.nsScanner.func2()
+
+API: SYSTEM.storage
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 2b86f616-4e1c-4295-b35e-a8bec106b154, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: ba40ad6d-5497-4055-a4fb-c5592722f341, dstVolume: .minio.sys:, dstPath: buckets/.bloomcycle.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold., Object buckets/.bloomcycle.bin (*fmt.wrapError)
+       4: internal/logger/logger.go:268:logger.LogIf()
+       3: cmd/logging.go:136:cmd.scannerLogIf()
+       2: cmd/data-scanner.go:231:cmd.runDataScanner()
+       1: cmd/data-scanner.go:82:cmd.initDataScanner.func1()
+
+API: SYSTEM.storage
+Time: 17:12:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: fb65b726-c011-4818-8d55-a2e5279bc9f4, dstVolume: .minio.sys:, dstPath: buckets/.usage.json - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: c56f94d2-bbf4-4fa4-9ec4-b826cb7c2f92, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 2c128ad5-6002-4cc7-a0e8-1144c25d56a0, dstVolume: .minio.sys:, dstPath: buckets/testbucket/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold. (cmd.StorageFull)
+       3: internal/logger/logger.go:268:logger.LogIf()
+       2: cmd/logging.go:136:cmd.scannerLogIf()
+       1: cmd/erasure.go:566:cmd.erasureObjects.nsScanner.func2()
+
+API: SYSTEM.storage
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 5d901e2a-dbcc-4481-97e9-a82e7e93a2d4, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 8217c80f-912a-49c9-a01e-0c5e09702220, dstVolume: .minio.sys:, dstPath: buckets/.usage-cache.bin.bkp - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.storage
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: a28b341f-d5e8-4c0d-a2c7-e7dae7049fef, dstVolume: .minio.sys:, dstPath: buckets/.bloomcycle.bin - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
+
+API: SYSTEM.scanner
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: Storage reached its minimum free drive threshold., Object buckets/.bloomcycle.bin (*fmt.wrapError)
+       4: internal/logger/logger.go:268:logger.LogIf()
+       3: cmd/logging.go:136:cmd.scannerLogIf()
+       2: cmd/data-scanner.go:231:cmd.runDataScanner()
+       1: cmd/data-scanner.go:82:cmd.initDataScanner.func1()
+
+API: SYSTEM.storage
+Time: 17:13:41 UTC 12/21/2024
+DeploymentID: b2166cf6-72f6-4542-9a64-869e7d172d3a
+Error: drive:/data, srcVolume: .minio.sys/tmp, srcPath: 97c19b5c-c0c5-46c3-8a23-6349985d318f, dstVolume: .minio.sys:, dstPath: buckets/.usage.json - error drive path full (*errors.errorString)
+       7: internal/logger/logonce.go:118:logger.(*logOnceType).logOnceIf()
+       6: internal/logger/logonce.go:149:logger.LogOnceIf()
+       5: cmd/logging.go:164:cmd.storageLogOnceIf()
+       4: cmd/xl-storage.go:2577:cmd.(*xlStorage).RenameData.func1()
+       3: cmd/xl-storage.go:2847:cmd.(*xlStorage).RenameData()
+       2: cmd/xl-storage-disk-id-check.go:501:cmd.(*xlStorageDiskIDCheck).RenameData.func2()
+       1: internal/ioutil/ioutil.go:116:ioutil.WithDeadline[...].func1()
